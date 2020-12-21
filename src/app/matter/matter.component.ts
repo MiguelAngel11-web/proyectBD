@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-matter',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatterComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(public server:ServiceService) {
+    this.server.getMateria();
+   }
+
+
 
   ngOnInit(): void {
+
   }
 
 }
